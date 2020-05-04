@@ -299,7 +299,7 @@ $(function () {
     }
 
     function triggerRadio(selector, targetValue) {
-        alert("don't do this");
+        //alert("don't do this");
         var $target = $(selector);
         $target.each(function () {
             var value = $(this).val();
