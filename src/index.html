@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css integrity=sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T crossorigin=anonymous>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <br>
+    <br>
+    
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-4">
+                <table class="table table-sm table-striped table-hover">
+                    <thead>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Relationship</th>
+                    </thead>
+                    <tbody data-opt-out-listener="subscriber"
+                           data-cancel-opt-out-listener="subscriber">
+                        <tr>
+                            <td><input class="subscriber" type="checkbox"></td>
+                            <td>John Doe</td>
+                            <td>child</td>
+                        </tr>
+                        <tr>
+                            <td><input class="subscriber" type="checkbox"></td>
+                            <td>Jane Doe</td>
+                            <td>child</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-8">
+                <table class="table table-bordered">
+                    <thead>
+                        <th class="no-border"></th>
+                        <th data-plan-code-active="false" data-plan-code="individual" colspan="2">Individual</th>
+                        <th data-plan-code-active="false" data-plan-code="family" colspan="2">Family</th>
+                    </thead>
+                    <tbody data-opt-out-listener="plan-type">
+                        <tr>
+                            <td>Select</td>
+                            <td data-plan-code-active="false" data-plan-code="individual">Monthly</td>
+                            <td data-plan-code-active="false" data-plan-code="individual">Per Paycheck</td>
+                            <td data-plan-code-active="false" data-plan-code="family">Monthly</td>
+                            <td data-plan-code-active="false" data-plan-code="family">Per Paycheck</td>
+                        </tr>
+                        <tr>
+                            <td><input id="plan-type-1" name="plan-type" value="1" type="radio"><label for="plan-type-1">PlanType One</label></td>
+                            <td data-plan-code-active="false" data-plan-type-active="false" data-plan-code="individual" data-plan-type="1">$0.00</td>
+                            <td data-plan-code-active="false" data-plan-type-active="false" data-plan-code="individual" data-plan-type="1">$0.00</td>
+                            <td data-plan-code-active="false" data-plan-type-active="false" data-plan-code="family" data-plan-type="1">$0.00</td>
+                            <td data-plan-code-active="false" data-plan-type-active="false" data-plan-code="family" data-plan-type="1">$0.00</td>
+                        </tr>
+                        <tr>
+                            <td><input id="plan-type-2" name="plan-type" value="2" type="radio"><label for="plan-type-2">PlanType Two</label></td>
+                            <td data-plan-code-active="false" data-plan-type-active="false" data-plan-code="individual" data-plan-type="2">$0.00</td>
+                            <td data-plan-code-active="false" data-plan-type-active="false" data-plan-code="individual" data-plan-type="2">$0.00</td>
+                            <td data-plan-code-active="false" data-plan-type-active="false" data-plan-code="family" data-plan-type="2">$0.00</td>
+                            <td data-plan-code-active="false" data-plan-type-active="false" data-plan-code="family" data-plan-type="2">$0.00</td>
+                        </tr>
+                        <tr>
+                            <td><input id="plan-type-3" name="plan-type" value="3" type="radio"><label for="plan-type-3">PlanType Three</label></td>
+                            <td data-plan-code-active="false" data-plan-type-active="false" data-plan-code="individual" data-plan-type="3">$0.00</td>
+                            <td data-plan-code-active="false" data-plan-type-active="false" data-plan-code="individual" data-plan-type="3">$0.00</td>
+                            <td data-plan-code-active="false" data-plan-type-active="false" data-plan-code="family" data-plan-type="3">$0.00</td>
+                            <td data-plan-code-active="false" data-plan-type-active="false" data-plan-code="family" data-plan-type="3">$0.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div>
+                    <input type="checkbox" id="opt-out"><label for="opt-out">OPT OUT</label>
+                </div>
+            </div>
+
+        </div>
+    
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+        <hr>
+
+        <div data-opt-out-listener="plan-code-hidden">
+            <div>
+                <input type="radio" name="plan-code-hidden" value="individual">
+                <label>plan code - individual</label>
+            </div>
+            <div>
+                <input type="radio" name="plan-code-hidden" value="family">
+                <label>plan code - family</label>
+            </div>
+            <div>
+                <input type="radio" name="plan-code-hidden" value="none">
+                <label>plan code - none</label>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <div data-opt-out-listener="plan-type-hidden">
+                <input type="radio" name="plan-type-hidden" value="1">
+                <label>plan type - 1</label>
+            </div>
+            <div>
+                <input type="radio" name="plan-type-hidden" value="2">
+                <label>plan type - 2</label>
+            </div>
+            <div>
+                <input type="radio" name="plan-type-hidden" value="3">
+                <label>plan type - 3</label>
+            </div>
+            <div>
+                <input type="radio" name="plan-type-hidden" value="none">
+                <label>plan type - none</label>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
