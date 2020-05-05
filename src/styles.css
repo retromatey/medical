@@ -1,3 +1,5 @@
+.subscriber-expanded { cursor: pointer; }
+.plan-type-expanded { cursor: pointer; }
 .no-border { border-top: 2px solid white !important; border-left: 2px solid white !important; }
 [data-plan-code-active=true] { background-color: white !important; }
 [data-plan-code-active=false] { background-color: #F2F2F2 !important; }
